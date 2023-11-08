@@ -62,9 +62,9 @@ const TicTacToe = () => {
       }
     }
 
-    if (updatedData.every((square) => square !== "")) {
-      // Handle draw
-    }
+    // if (updatedData.every((square) => square !== "")) {
+    //   // Handle draw
+    // }
   };
 
   const won = (winner) => {
