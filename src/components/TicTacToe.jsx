@@ -61,10 +61,6 @@ const TicTacToe = () => {
         return;
       }
     }
-
-    // if (updatedData.every((square) => square !== "")) {
-    //   // Handle draw
-    // }
   };
 
   const won = (winner) => {
@@ -87,7 +83,7 @@ const TicTacToe = () => {
               className="boxes"
               key={index}
               ref={box}
-              onClick={() => toggle(index)}
+              onClick={toggle(index)}
             >
               {data[index] === "x" ? (
                 <img src={Cross} alt="Cross" />
@@ -103,7 +99,7 @@ const TicTacToe = () => {
               className="boxes"
               key={index + 3}
               ref={box}
-              onClick={() => toggle(index + 3)}
+              onClick={toggle(index + 3)}
             >
               {data[index + 3] === "x" ? (
                 <img src={Cross} alt="Cross" />
@@ -119,7 +115,7 @@ const TicTacToe = () => {
               className="boxes"
               key={index + 6}
               ref={box}
-              onClick={() => toggle(index + 6)}
+              onClick={toggle(index + 6)}
             >
               {data[index + 6] === "x" ? (
                 <img src={Cross} alt="Cross" />
