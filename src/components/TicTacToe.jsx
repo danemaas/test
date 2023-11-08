@@ -73,7 +73,64 @@ const TicTacToe = () => {
     window.location.reload();
   };
 
-  return <div>test</div>;
+  return (
+    <div className="container">
+      <h1 className="title">{title}</h1>
+      <div className="board">
+        <div className="row1">
+          {boxArray.slice(0, 3).map((box, index) => (
+            <div
+              className="boxes"
+              key={index}
+              ref={box}
+              onClick={toggle(index)}
+            >
+              {data[index] === "x" ? (
+                <img src={Cross} alt="Cross" />
+              ) : data[index] === "o" ? (
+                <img src={Circle} alt="Circle" />
+              ) : null}
+            </div>
+          ))}
+        </div>
+        <div className="row2">
+          {boxArray.slice(3, 6).map((box, index) => (
+            <div
+              className="boxes"
+              key={index + 3}
+              ref={box}
+              onClick={toggle(index + 3)}
+            >
+              {data[index + 3] === "x" ? (
+                <img src={Cross} alt="Cross" />
+              ) : data[index + 3] === "o" ? (
+                <img src={Circle} alt="Circle" />
+              ) : null}
+            </div>
+          ))}
+        </div>
+        <div className="row3">
+          {boxArray.slice(6).map((box, index) => (
+            <div
+              className="boxes"
+              key={index + 6}
+              ref={box}
+              onClick={toggle(index + 6)}
+            >
+              {data[index + 6] === "x" ? (
+                <img src={Cross} alt="Cross" />
+              ) : data[index + 6] === "o" ? (
+                <img src={Circle} alt="Circle" />
+              ) : null}
+            </div>
+          ))}
+        </div>
+      </div>
+      <button className="reset" onClick={handleReset}>
+        Reset
+      </button>
+    </div>
+  );
 };
 
 export default TicTacToe;

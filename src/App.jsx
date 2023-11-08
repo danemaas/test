@@ -4,7 +4,6 @@ function App() {
   return (
     <>
       <TicTacToe />
-      <div>Hello there</div>
     </>
   );
 }
